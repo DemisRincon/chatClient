@@ -5,7 +5,7 @@ import Chat from './pages/chat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';;
 
-const socket = io.connect('https://chatserver-production-5cf7.up.railway.app/'); 
+const socket = io.connect('https://chatserver-production-5cf7.up.railway.app/', { transports : ['websocket'] }); 
 
 function App() {
   const [username, setUsername] = useState(''); 
