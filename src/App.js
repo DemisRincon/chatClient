@@ -8,7 +8,7 @@ import io from 'socket.io-client';;
 const socket = io('https://marck-server.onrender.com', {
   withCredentials: true,
   extraHeaders: {
-    "my-custom-header": "abcd"
+    "Access-Control-Allow-Origin": "*"
   }
 });
 
