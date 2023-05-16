@@ -5,21 +5,21 @@ import Chat from './pages/chat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';;
 
-const socket = io.connect('https://marck-server.onrender.com', { transports: ['websocket', 'polling'] }); 
+const socket = io.connect('https://marck-server.onrender.com');
 
 function App() {
-  const [username, setUsername] = useState(''); 
+  const [username, setUsername] = useState('');
   const [room, setRoom] = useState('');
   return (
     <Router>
       <div className='App'>
         <Routes>
           <Route path='/' element={<Home
-            username={username} 
-            setUsername={setUsername} 
+            username={username}
+            setUsername={setUsername}
             room={room}
-            setRoom={setRoom} 
-            socket={socket} 
+            setRoom={setRoom}
+            socket={socket}
           />} />
           <Route
             path='/chat'
