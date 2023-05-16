@@ -5,7 +5,7 @@ import Chat from './pages/chat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';;
 
-const socket = io('https://marck-server.onrender.com', {
+const socket = io.connect('https://marck-server.onrender.com', {
   withCredentials: true,
   extraHeaders: {
     "Access-Control-Allow-Origin": "*"
